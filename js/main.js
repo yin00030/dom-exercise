@@ -15,38 +15,39 @@ console.log("tagline: ", tagline);
 var headings = document.querySelectorAll(".bg-main-content h2");
 console.log("headings: ", headings);
 // 3.//
-var collect = tagline.innerHTML.innerHTML + "\n-------------------\n\n";
+var collect = tagline.innerHTML + "\n-------------------\n\n";
 console.log("collect: ", collect);
 
 //4.//
 var i;
 
 for (i = 0; i < headings.length; i += 1) {
-collect += "\n" +headings[i].innerHTML:
-
+collect += "\n" + headings[i].innerHTML;
+//collect = collect + "\n" + heading[i].innerHTML;
 }
     
     //print your collect here
 alert(collect);
 
-/*Task 2
+//Task 2
 
-Access 13th div with class name box that belongs to div with the class name bg-main-content. 
-You can name the variable when_to_launch.
-Use property children to "scoop" in array all HTML elements that belong to that div.
-Create the variable collect and assign it with content of heading that belongs to gotten array.
-Loop through the array starting with the second array element (the first one is heading and it is already assigned to variable collect) and append the content of array elements to variable collect.
-After the loop, use alert to print collect*/
+//1.Access 13th div with class name box that belongs to div with the class name bg-main-content.
 
-var boxes = document.querySelectorAll(".bg-mian-content .box");
+var boxes = document.querySelectorAll(".bg-main-content .box");
 
+//2.You can name the variable when_to_launch.
 var when_to_launch = boxes[12];
-
+//Use property children to "scoop" in array all HTML elements that belong to that div.
 var children = when_to_launch.children;
+//3.Create the variable collect and assign it with content of heading that belongs to gotten array.
+var collect = children[0].innerHTML + "\n-------------------------";
+//4.Loop through the array starting with the second array element (the first one is heading and it is already assigned to variable collect) and append the content of array elements to variable collect.
 
-var collect = children[0] .innerHTML + "\n-------------------------";
-
-for(var i =1; i<children.length; i+=1) {
+for(var i =1; i < children.length; i += 1) {
   collect += "\n\n" + children[i].innerHTML;
   }
+//5.After the loop, use alert to print collect
   alert(collect);
+
+
+
