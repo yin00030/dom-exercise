@@ -22,7 +22,7 @@ console.log("collect: ", collect);
 var i;
 
 for (i = 0; i < headings.length; i += 1) {
-//    collect += "\n" +headings[i].innerHTML:
+collect += "\n" +headings[i].innerHTML:
 
 }
     
